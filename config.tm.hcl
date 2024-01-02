@@ -2,11 +2,8 @@
 generate_hcl "backend.tf" {
   content {
     terraform {
-      backend "s3" {
-      bucket = "mybucket"
-      key    = "${terramate.stack.path.relative}/terraform.state"
-      region = "us-west-2"
-      encrypt = true
+      backend "local" {
+        path = "terraform.tfstate"
      }
   }
   }
