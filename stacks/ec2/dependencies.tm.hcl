@@ -10,7 +10,7 @@ generate_hcl "dependencies.tf" {
         backend = "s3"
 
         config = {
-          bucket  = "mybucket"
+          bucket  = "data-sharing-state-bucket"
           region  = "us-west-2"
           encrypt = true
           key     = "${value.value}/terraform.state"
