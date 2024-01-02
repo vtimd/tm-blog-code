@@ -5,6 +5,6 @@ terraform {
     bucket  = "mybucket"
     encrypt = true
     key     = "stacks/vpc/terraform.state"
-    region  = "us-east-1"
+    region  = "us-west-2"
   }
 }

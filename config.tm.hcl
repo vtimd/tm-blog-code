@@ -5,7 +5,7 @@ generate_hcl "backend.tf" {
       backend "s3" {
       bucket = "mybucket"
       key    = "${terramate.stack.path.relative}/terraform.state"
-      region = "us-east-1"
+      region = "us-west-2"
       encrypt = true
      }
   }

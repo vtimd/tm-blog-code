@@ -1,10 +1,10 @@
 // TERRAMATE: GENERATED AUTOMATICALLY DO NOT EDIT
 
-terraform_remote_state "vpc" {
+data terraform_remote_state "vpc" {
   backend = "s3"
   config = {
     bucket  = "mybucket"
-    region  = "us-east-1"
+    region  = "us-west-2"
     encrypt = true
     key     = "stacks/vpc/terraform.state"
   }
