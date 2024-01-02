@@ -9,7 +9,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
 
 # Create a VPC
@@ -35,7 +35,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  subnet_id = data.terraform_remote_state.vpc.outputs.subnet_id
+  subnet_id = "data.terraform_remote_state.vpc.outputs.subnet_id"
   instance_type = "t3.micro"
 
   tags = {
